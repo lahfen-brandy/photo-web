@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Web</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body>
+    <section id="home">
+        <div class="">
+            <nav>
+                <div id="nav_bar">
+                    <ul class="nav_list">
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div id="sideNav">
+                    <div id="top-nav">
+                        <span class="home-btn">
+                            <a href="#home">HOME</a>
+                        </span>
+                        <div id="menuBtn">
+                            <img src="assets/images/menu.png" id="menu">
+                        </div>
+                    </div>
+                    <ul class="side_nav_list">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#search">SEARCH</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <script>
+                const menuBtn = document.getElementById("menuBtn");
+                const SideNav = document.getElementById("sideNav");
+                const menu = document.getElementById("menu");
+
+                menuBtn.onclick = function () {
+                    if (SideNav.classList.contains("active")) {
+                        SideNav.classList.remove("active");
+                        menu.src = "assets/images/menu.png";
+                    } else {
+                        SideNav.classList.add('active');
+                        menu.src = "assets/images/close.png";
+                    }
+                }
+            </script>
+        </div>
+        <div id="home-text">
+            <h1>MY <span class="span-web">WEBSITE</span> LOGO</h1>
+        </div>
+    </section>
+    <section id="about">
+        <div id="about_header">
+            <h1>
+                ABOUT ME </h1>
+    
+            <h6>I love photography</h6>
+        </div>
+        <div id="about_text">
+            <p>
+                This is a fictional character with a fictional hobby
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Omnis pariatur assumenda consequatur. Eligendi aspernatur, c
+                upiditate ipsam quis voluptates dignissimos sapiente voluptatem
+                saepe dolorum? Quidem, amet mollitia doloremque voluptates sit enim.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempora
+                explicabo maxime reiciendis deserunt? Ratione pariatur hic quis velit maiores, impedit
+                totam odit, placeat itaque dolores corporis quidem numquam minus.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod corrupti ipsa
+                impedit excepturi laudantium rerum in ipsam ab repellendus nesciunt a quos quo illum nam totam,
+                adipisci et itaque eveniet.
+            </p>
+        </div>
+        <div id="about_info">
+            <div id="about_info-dtls">
+                    <h6>My Name</h6>
+                    <img src="assets/images/avatar_hat.jpg">
+            </div>
+            <div id="about_info-text">
+                <p>Welcome to my website. I am Lorem ipsum, dolor sit amet c
+                    onsectetur adipisicing elit. Magnam quia voluptas hic mollitia 
+                    explicabo necessitatibus voluptatem adipisci, eos, modi nisi nemo 
+                    ab, incidunt quae tempore illum beatae laboriosam rem eum.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione voluptatibus 
+                porro deleniti animi labore voluptates odio, ducimus distinctio magni aspernatur,
+                 enim incidunt facilis esse necessitatibus illum sunt exercitationem quae repellendus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum veritatis voluptas beatae 
+                eligendi. Minus excepturi illum recusandae rem. Commodi, quidem amet. Quis maiores qui voluptate 
+                illum officiis est sed?</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
