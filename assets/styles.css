@@ -169,7 +169,7 @@ nav .side_nav_list li a:hover {
 
 #home,
 #about,
-#portfolio,
+#port_intro,
 #contact {
     background-repeat: no-repeat;
     background-size: cover;
@@ -191,7 +191,7 @@ nav .side_nav_list li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 3vh;
+    font-size: 20px;
     margin-top: 4vh;
     color: #fff;
 
@@ -200,26 +200,45 @@ nav .side_nav_list li a:hover {
         background: black;
         color: #fff;
         padding: 10px 30px;
+        font-weight: normal;
+        letter-spacing: 10px;
     }
 
     span {
         color: #fff;
         padding: 15px;
+        letter-spacing: 10px;
     }
 }
 
+#home,
 #home-text,
-.span-web {
+.span-web,
+#about_info-text {
     @media only screen and (max-width: 600px) {
         &.span-web {
+            display: none;
+        }
+
+        &#about_info-text {
             display: none;
         }
     }
 }
 
+@media screen and (max-width: 600px) {
+    #home {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/parallax1.jpg');
+        max-height: 90vh;
+    }
+
+}
 
 /* about section */
-#about{
+#about {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -228,49 +247,244 @@ nav .side_nav_list li a:hover {
     font-size: 20px;
     margin-top: 110px;
 }
-#about_header h1{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-#about_header h6{
-    font-size: 1rem;
-    width: 100%;
-    margin-bottom: 20px;
-}
-#about_text{
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    width: 100%;
-    margin: 0 25%;
-    font-size: 15px;
-    line-height: 30px;
-}
-#about_info{
-    display: flex;
-    margin-top: 40px; 
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-    gap: 30px;
-}
-#about_info-dtls{
+
+#about-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
-#about_info-dtls img{
+
+#about_header h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+#about_header h6 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+#about_text {
+    display: flex;
+    text-align: left;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+#about-dtls {
+    display: flex;
+    justify-content: center;
+}
+
+#about_info {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    gap: 30px;
+}
+
+#about_info-dtls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#about_info-dtls img {
     width: 90%;
     margin-top: 50px;
 }
-#about_info-text{
+
+#about_info-text {
     display: flex;
     text-align: left;
     width: 50%;
     font-size: 15px;
     line-height: 30px;
+}
+
+#about-skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+}
+
+#about-skill-dtls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 54%;
+}
+
+.intro {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#skill_bar {
+    width: 90%;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 15px;
+    text-align: left;
+    margin-bottom: 40px;
+
+    P {
+        margin-bottom: 15px;
+    }
+}
+
+
+.load_bar,
+.inner-bar_1,
+.inner-bar_2,
+.inner-bar_3 {
+    background: #d7d5d5;
+    height: 40px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .inner-bar_1 {
+        background: #777;
+        max-width: 90%;
+    }
+
+    .inner-bar_2 {
+        background: #777;
+        max-width: 85%;
+    }
+
+    .inner-bar_3 {
+        background: #777;
+        max-width: 75%;
+    }
+
+    .bar-text {
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        padding-top: 1.5%;
+        font-weight: normal;
+        letter-spacing: 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about-info {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    #about_text {
+        display: flex;
+        text-align: left;
+        line-height: 25px;
+    }
+
+    #about_info-dtls img {
+        width: 250px;
+    }
+
+    #about-skill {
+        margin-top: 70px;
+    }
+
+    #about-skill-dtls {
+        width: 100%;
+    }
+
+    .load_bar,
+    .inner-bar_1,
+    .inner-bar_2,
+    .inner-bar_3 {
+        height: 30px;
+
+        .bar-text {
+            padding-top: 3%;
+        }
+    }
+
+}
+
+
+/* Portfolio */
+#port_intro {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/parallax2.jpg');
+    height: 60vh;
+
+    p,
+    h1 {
+        font-weight: normal;
+        letter-spacing: 5px;
+        color: #ded9d9;
+
+        span {
+            display: flex;
+            flex-wrap: wrap;
+            color: #ded9d9;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+#port-bar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#bar_cnt {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    align-items: center;
+    justify-content: space-around;
+    background: #333;
+
+    p {
+        font-size: 20px;
+        letter-spacing: 1px;
+
+        span {
+            display: block;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    }
+}
+
+#port_intro .port_header {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#work_dtls{
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
 }
