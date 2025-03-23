@@ -5,8 +5,12 @@ html {
 * {
     margin: 0;
     padding: 0;
-    color: #777;
     font-family: "Lato", sans-serif;
+}
+
+body,
+html {
+    color: #777;
 }
 
 /* navbtn */
@@ -19,6 +23,21 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    transition: background-color 0.4s ease-in-out;
+}
+
+nav.scrolled {
+    /* transform: translateY(-50px); */
+    background-color: #fefefe;
+    opacity: 0.98;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: up-to-down 0.4s ease-in-out;
+}
+
+@keyframes up-to-down {
+    50% {
+        transform: translateY(-100px);
+    }
 }
 
 nav .nav_list {
@@ -287,22 +306,41 @@ nav .side_nav_list li a:hover {
     justify-content: space-around;
     align-items: center;
     width: 50%;
-    gap: 30px;
 }
-
 #about_info-dtls {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
 
-#about_info-dtls img {
-    width: 90%;
+#about_info-dtls #imag {
+    width: 87%;
+    height: 29vh;
     margin-top: 50px;
+    background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/avatar_hat.jpg');
+    background-size: contain;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0000005e), url('./images/avatar_hat.jpg'); */
+}
+#about_info-dtls:hover #imag{
+    background-image: url('./images/avatar_hat.jpg');
+}
+/* .overlay {
+    width: 420px;
+    height: 282px;
+    position: absolute;
+    top: 148%;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #0000005e);
+    opacity: 0;
+    transition: 1s;
 }
 
+#about_info-dtls:hover .overlay {
+    opacity: 1;
+} */
 #about_info-text {
     display: flex;
     text-align: left;
@@ -483,7 +521,7 @@ nav .side_nav_list li a:hover {
     justify-content: center;
 }
 
-#work_dtls{
+#work_dtls {
     display: flex;
     flex-wrap: wrap;
     color: black;
