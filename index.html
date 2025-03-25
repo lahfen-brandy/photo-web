@@ -20,23 +20,23 @@
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
-                <div id="sideNav">
-                    <div id="top-nav">
-                        <span class="home-btn">
-                            <a href="#home">HOME</a>
-                        </span>
-                        <div id="menuBtn">
-                            <img src="assets/images/menu.png" id="menu">
-                        </div>
-                    </div>
-                    <ul class="side_nav_list">
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#portfolio">PORTFOLIO</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <li><a href="#search">SEARCH</a></li>
-                    </ul>
-                </div>
             </nav>
+            <div id="sideNav">
+                <div id="top-nav">
+                    <span class="home-btn">
+                        <a href="#home">HOME</a>
+                    </span>
+                    <div id="menuBtn">
+                        <img src="assets/images/menu.png" id="menu">
+                    </div>
+                </div>
+                <ul class="side_nav_list">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#search">SEARCH</a></li>
+                </ul>
+            </div>
             <script>
                 const menuBtn = document.getElementById("menuBtn");
                 const SideNav = document.getElementById("sideNav");
@@ -156,10 +156,18 @@
     <section id="port_intro">
         <div id="port-bar">
             <div id="bar_cnt">
-                <p>14+<span>Partners</span></p>
-                <p>55+<span>Projects Done</span></p>
-                <p>89+<span>Happy Clients</span></p>
-                <p>150+<span>Meetings</span></p>
+                <div>
+                    <p>14+<span>Partners</span></p>
+                </div>
+                <div>
+                    <p>55+<span>Projects Done</span></p>
+                </div>
+                <div>
+                    <p>89+<span>Happy Clients</span></p>
+                </div>
+                <div>
+                    <p>150+<span>Meetings</span></p>
+                </div>
             </div>
             <div class="port_header">
                 <h1>PORTFOLIO</h1>
@@ -169,23 +177,27 @@
 
     <soction id="portfolio">
         <div id="work_dtls">
-            <h1>MY WORK</h>
-                <p>Here are some of my latest lorem work ipsum tipsum</p>
-                <p>Click on images to make them bigger</p>
+            <h1>MY WORK</h1>
+            <h2>Here are some of my latest lorem work ipsum tipsum</h2>
+            <p>Click on images to make them bigger</p>
         </div>
         <div id="my_coln">
-            <div><img src="assets/images/p1.jpg"></div>
-            <div><img src="assets/images/p2.jpg"></div>
-            <div><img src="assets/images/p3.jpg"></div>
-            <div><img src="assets/images/p4.jpg"></div>
-            <div><img src="assets/images/p5.jpg"></div>
-            <div><img src="assets/images/p6.jpg"></div>
-            <div><img src="assets/images/p7.jpg"></div>
-            <div><img src="assets/images/p8.jpg"></div>
-         </div>
-         <div id="opt_btn">
+            <div class="animal-coln">
+                <div><img src="assets/images/p1.jpg"></div>
+                <div><img src="assets/images/p2.jpg"></div>
+                <div><img src="assets/images/p3.jpg"></div>
+                <div><img src="assets/images/p4.jpg"></div>
+            </div>
+            <div class="animal-coln_2">
+                <div><img src="assets/images/p5.jpg"></div>
+                <div><img src="assets/images/p6.jpg"></div>
+                <div><img src="assets/images/p7.jpg"></div>
+                <div><img src="assets/images/p8.jpg"></div>
+            </div>
+        </div>
+        <div id="opt_btn">
             <p>LOAD MORE</p>
-         </div>
+        </div>
     </soction>
 </body>
 
