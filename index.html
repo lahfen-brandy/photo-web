@@ -41,6 +41,8 @@
                 const menuBtn = document.getElementById("menuBtn");
                 const SideNav = document.getElementById("sideNav");
                 const menu = document.getElementById("menu");
+                const side_nav_list_onclick = document.getElementsByClassName("side_nav_list"); 
+                const onclik = document.getElementsByClassName("side_nav_list a"); 
 
                 menuBtn.onclick = function () {
                     if (SideNav.classList.contains("active")) {
@@ -60,6 +62,14 @@
                         nav.classList.remove('scrolled')
                     }
                 })
+                side_nav_list_onclick.onclick = function () {
+                    if (onclik.classList.contains("active")){
+                        SideNav.classList.remove("active");
+                    }
+                    else {
+                        SideNav.classList.add('active');
+                    }
+                }
             </script>
         </div>
         <div id="home-text">
@@ -96,8 +106,8 @@
             <div id="about_info">
                 <div id="about_info-dtls">
                     <h6>My Name</h6>
-                    <div id="imag"></div>
-                    <div class="overlay"></div>
+                    
+                    <div id="overlay"><div id="imag"></div></div>
                 </div>
                 <div id="about_info-text">
                     <p>Welcome to my website. I am Lorem ipsum, dolor sit amet c

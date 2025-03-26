@@ -16,6 +16,7 @@ html {
 /* navbtn */
 nav {
     display: flex;
+    align-items: center;
     width: 100%;
     height: 40px;
     padding: 0;
@@ -68,7 +69,7 @@ nav .nav_list li a:hover {
 
 #sideNav {
     width: 150px;
-    height: 41%;
+    height: 23.4%;
     position: fixed;
     right: -250px;
     top: 10px;
@@ -82,21 +83,21 @@ nav .nav_list li a:hover {
     display: flex;
     right: 1px;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
     transition: 0.000000001s;
 }
-
 .side_nav_list li {
+    display: flex;
     list-style-type: none;
-    margin-left: -1%;
     align-items: left;
 }
 
 .side_nav_list li a {
     display: flex;
-    padding: 15px 16rem;
+    padding: 15px 75vw;
     padding-left: 20px;
     text-decoration: none;
+    justify-content: flex-start;
     color: black;
     font-size: 16px;
 }
@@ -121,7 +122,7 @@ nav .nav_list li a:hover {
 #menuBtn img {
     position: absolute;
     width: 10px;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .home-btn {
@@ -135,7 +136,7 @@ nav .nav_list li a:hover {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 
 .home-btn:hover {
@@ -253,7 +254,8 @@ nav .nav_list li a:hover {
         justify-content: center;
         background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/parallax1.jpg');
         background-size: fit-content;
-        max-height: 90vh;
+        height: 90vh;
+        width: 100vw;
     }
 
 }
@@ -307,7 +309,8 @@ nav .nav_list li a:hover {
     margin-top: 40px;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
+    width: 55%;
+    /* gap: 10px; */
 }
 
 #about_info-dtls {
@@ -315,20 +318,26 @@ nav .nav_list li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
 }
-
-#about_info-dtls #imag {
-    width: 87%;
-    height: 29vh;
+#overlay{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* height: 70%; */
+    width: 100%;
+}
+#overlay #imag {
+    width: 100%;
+    height: 28vh;
     margin-top: 50px;
     background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/avatar_hat.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0000005e), url('./images/avatar_hat.jpg'); */
 }
-
-#about_info-dtls:hover #imag {
+#overlay:hover #imag {
     background-image: url('./images/avatar_hat.jpg');
 }
 
@@ -350,7 +359,7 @@ nav .nav_list li a:hover {
 #about_info-text {
     display: flex;
     text-align: left;
-    width: 50%;
+    width: 45%;
     font-size: 15px;
     line-height: 30px;
 }
@@ -634,4 +643,16 @@ nav .nav_list li a:hover {
         margin: 0 0;
         gap: 0;}
     }
+}
+@media only screen and (max-width: 778px){
+    #my_coln{
+        display: flex;
+        width: 100%;
+    }
+    .animal-coln img, .animal-coln_2 img{
+        display: flex;
+        width: 22vw;
+        margin:8px 8px;
+    }
+    
 }
