@@ -191,7 +191,7 @@ nav .nav_list li a:hover {
 #home,
 #about,
 #port_intro,
-#contact {
+#contact_bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -325,10 +325,10 @@ nav .nav_list li a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* height: 70%; */
-    width: 100%;
+    height: 10%;
+    /* width: 100%; */
 }
-#overlay #imag {
+#overlay .imag {
     width: 100%;
     height: 28vh;
     margin-top: 50px;
@@ -337,7 +337,7 @@ nav .nav_list li a:hover {
     background-repeat: no-repeat;
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0000005e), url('./images/avatar_hat.jpg'); */
 }
-#overlay:hover #imag {
+#overlay:hover .imag {
     background-image: url('./images/avatar_hat.jpg');
 }
 
@@ -453,18 +453,31 @@ nav .nav_list li a:hover {
         line-height: 25px;
         /* margin: 0 15px; */
     }
-
-    #about_info-dtls,
-    #imag {
+    #about_info-dtls {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        width: 100px;
+        align-items: center;
+        width: 60vw;
+        /* background-color: red; */
+    }
+    #overlay{
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+    }
+    #overlay .imag {
+        min-width: 100%;
+        height: 28vh;
+        margin-top: 50px;
+        background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/avatar_hat.jpg');
+        background-size: cover;
         background-repeat: no-repeat;
-        background-size: contain;
-
-        #imag {
-            width: 110px;
         }
+    #overlay:hover .imag {
+        background-image: url('./images/avatar_hat.jpg');
     }
 
     #about-skill {
@@ -638,10 +651,16 @@ nav .nav_list li a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        img{
-        min-width: 250px;
+    }
+    .animal-coln_2{
+        margin: 20px 0 0 0;
+    }
+    .animal-coln div, .animal-coln_2 div {
         margin: 0 0;
-        gap: 0;}
+        img{
+            min-width: 250px;
+            margin: 0 0;
+            }
     }
 }
 @media only screen and (max-width: 778px){
@@ -656,3 +675,53 @@ nav .nav_list li a:hover {
     }
     
 }
+
+/* Contact */
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#contact_bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/parallax3.jpg');
+    height: 40vh;
+    width: 100%;
+
+    h1 {
+        font-weight: normal;
+        letter-spacing: 5px;
+        color: #ded9d9;
+    }
+}
+
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#contact-header{
+    width: 100%;
+    justify-content: center;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 500px;
+    text-align: center;
+
+    h1 {
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+    p{
+        margin-top: 30px;
+        font-size: 15px;
+        font-family:'Courier New', Courier, monospace;
+    }
+} 
