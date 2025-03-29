@@ -41,8 +41,8 @@
                 const menuBtn = document.getElementById("menuBtn");
                 const SideNav = document.getElementById("sideNav");
                 const menu = document.getElementById("menu");
-                const side_nav_list_onclick = document.getElementsByClassName("side_nav_list"); 
-                const onclik = document.getElementsByClassName("side_nav_list a"); 
+                const side_nav_list_onclick = document.getElementsByClassName("side_nav_list");
+                const onclik = document.getElementsByClassName("side_nav_list a");
 
                 menuBtn.onclick = function () {
                     if (SideNav.classList.contains("active")) {
@@ -63,7 +63,7 @@
                     }
                 })
                 side_nav_list_onclick.onclick = function () {
-                    if (onclik.classList.contains("active")){
+                    if (onclik.classList.contains("active")) {
                         SideNav.classList.remove("active");
                     }
                     else {
@@ -106,8 +106,10 @@
             <div id="about_info">
                 <div id="about_info-dtls">
                     <h6>My Name</h6>
-                    
-                    <div id="overlay"><div class="imag"></div></div>
+
+                    <div id="overlay">
+                        <div class="imag"></div>
+                    </div>
                 </div>
                 <div id="about_info-text">
                     <p>Welcome to my website. I am Lorem ipsum, dolor sit amet c
@@ -212,28 +214,41 @@
 
 
     <!-- contact -->
-     <section id="cont">
+    <section id="cont">
         <div id="contact_bg">
             <h1>CONTACT</h1>
         </div>
-     </section>
-     <section id="contact">
+    </section>
+    <section id="contact">
         <div id="contact-header">
             <h1>WHERE I WORK</h1>
             <p>I'd love your feedback</p>
         </div>
         <div id="contact-start">
             <div id="contact-map">
-
+                <img src="./assets/images/map.jpg">
             </div>
             <div id="contact-review">
-                <div class="contac-info">
-
+                <div class="contact-info">
+                    <p><img src="./assets/icons/map-marker.png"> Yaounde Cameroon</p>
+                    <p><img src="./assets/icons/phone.png"> Phone: <span>+237673108111</span></p>
+                    <p><img src="./assets/icons/mail.png"> Email: <span>lahfenbrandy@gmail.com</span></p>
+                    <h1>Swing by for a cup or leave me a note</h1>
                 </div>
                 <div class="contact-form">
-
+                    <form>
+                        <div class="input">
+                            <input placeholder="name" name="name" required>
+                            <input placeholder="email" name="email" type="email" required>
+                        </div>
                 </div>
+               <div class="textarea">
+                <textarea name="comment" id="comment" placeholder="Message" cols="80" rows="1"></textarea>
+                <button type="submit">Send Message</button>
             </div>
+                </form>
+            </div>
+        </div>
         </div>
     </section>
 </body>
