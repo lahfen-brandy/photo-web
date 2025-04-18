@@ -847,7 +847,7 @@ nav .nav_list li a:hover {
     div {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 1rem;
         margin: 12px 0;
         width: 100%;
@@ -994,12 +994,13 @@ nav .nav_list li a:hover {
 }
 #footer p{
     font-size: 14px;
-    span{
+    a{
+        color: #fff;
         cursor: pointer;
         text-decoration: underline;
     }
 }
 
-#footer p span:hover{
-    color: #46c876;
+#footer p a:hover{
+    color: #089ea3;
 }
