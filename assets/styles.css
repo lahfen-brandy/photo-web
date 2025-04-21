@@ -24,6 +24,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     transition: background-color 0.4s ease-in-out;
 }
 
@@ -60,6 +61,7 @@ nav .nav_list li a {
     font-size: 1rem;
     color: #777;
     padding: 10px 20px;
+
     img {
         width: 20px;
         margin-right: 5px;
@@ -315,7 +317,6 @@ nav .nav_list li a:hover {
     justify-content: space-around;
     align-items: center;
     width: 55%;
-    /* gap: 10px; */
 }
 
 #about_info-dtls {
@@ -324,10 +325,12 @@ nav .nav_list li a:hover {
     justify-content: center;
     align-items: center;
     width: 40%;
-    h6{
+
+    h6 {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
             width: 20px;
             margin-right: 5px;
@@ -335,44 +338,39 @@ nav .nav_list li a:hover {
     }
 }
 
-#overlay {
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    /* width: 100%; */
-}
-
-#overlay .imag {
+#avatar_image {
+    display: flex;
     width: 100%;
-    height: 28vh;
+    position: relative;
     margin-top: 50px;
-    background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/avatar_hat.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), #0000005e), url('./images/avatar_hat.jpg'); */
-}
-
-#overlay:hover .imag {
-    background-image: url('./images/avatar_hat.jpg');
-}
-
-/* .overlay {
-    width: 420px;
-    height: 282px;
-    position: absolute;
-    top: 148%;
-    border-radius: 7px;
+    justify-content: center;
     cursor: pointer;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #0000005e);
-    opacity: 0;
-    transition: 1s;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 96%;
+        position: absolute;
+        /* top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; */
+        background-size: cover;
+        transition: 1s;
+        background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/avatar_hat.jpg');
+    }
+
 }
 
-#about_info-dtls:hover .overlay {
-    opacity: 1;
-} */
+#avatar_image:hover .overlay {
+    display: none;
+    transition: 0.001s;
+}
+
 #about_info-text {
     display: flex;
     text-align: left;
@@ -419,6 +417,7 @@ nav .nav_list li a:hover {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
+
         img {
             width: 16px;
             margin-right: 15px;
@@ -456,6 +455,7 @@ nav .nav_list li a:hover {
         display: flex;
         color: #fff;
         justify-content: center;
+        align-items: center;
         padding-top: 1.5%;
         font-weight: normal;
         letter-spacing: 0;
@@ -486,29 +486,8 @@ nav .nav_list li a:hover {
         /* background-color: red; */
     }
 
-    #overlay {
-        display: block;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 80vw;
-    }
-
-    #overlay .imag {
-        min-width: 100%;
-        height: 28vh;
-        margin-top: 50px;
-        background-image: linear-gradient(#00000000, #0000005e, #0000005e), url('./images/avatar_hat.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    #overlay:hover .imag {
-        background-image: url('./images/avatar_hat.jpg');
-    }
-
-    #about-skill {
-        margin-top: 70px;
+    #about_info {
+        width: 100%;
     }
 
     #about-skill-dtls {
@@ -642,15 +621,18 @@ nav .nav_list li a:hover {
     margin: 10px 10px;
     cursor: pointer;
 }
+
 .overlay {
     width: 200px;
     margin: 10px 10px;
     position: absolute;
 }
+
 .animal-coln .overlay:hover,
 .animal-coln_2 img {
     background: red;
 }
+
 #opt_btn {
     display: flex;
     margin: 50px 0;
@@ -827,6 +809,7 @@ nav .nav_list li a:hover {
         font-weight: normal;
         font-size: 16px;
         margin-top: 50px;
+
         img {
             width: 16px;
             margin: 0 0;
@@ -888,6 +871,7 @@ nav .nav_list li a:hover {
         font-weight: bold;
         font-size: 1.1rem;
         margin-top: 1rem;
+
         img {
             width: 20px;
         }
@@ -949,7 +933,7 @@ nav .nav_list li a:hover {
 }
 
 /* Footer */
-#footer{
+#footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -959,28 +943,32 @@ nav .nav_list li a:hover {
     padding: 60px 0 85px 0;
     margin-top: 150px;
 }
-#footer:hover{
+
+#footer:hover {
     background: black;
 }
-#footer h1{
+
+#footer h1 {
     display: flex;
     justify-content: center;
     margin: 0 0 5px 0;
     width: 100%;
 }
-#footer h1 a{
+
+#footer h1 a {
     text-decoration: none;
     font-weight: normal;
     font-size: 17px;
     color: #333;
-    background:white;
-    padding:13px 25px;
-}
-#footer h1 a:hover{
-    background:lightgray;
+    background: white;
+    padding: 13px 25px;
 }
 
-#footer_img{
+#footer h1 a:hover {
+    background: lightgray;
+}
+
+#footer_img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -988,19 +976,37 @@ nav .nav_list li a:hover {
     margin: 20px 0 40px 0;
     gap: 5px;
 }
-#footer_img img{
+
+#footer_img img {
     width: 25px;
     cursor: pointer;
 }
-#footer p{
+
+#footer p {
     font-size: 14px;
-    a{
+
+    a {
         color: #fff;
         cursor: pointer;
         text-decoration: underline;
     }
 }
 
-#footer p a:hover{
+#footer p a:hover {
     color: #089ea3;
+}
+
+@media only screen and (width: 1024px){
+    #about-info{
+        width: 80%;
+    }
+    #about_info{
+        width: 100%;
+    }
+    #about_info-dtls{
+        width:25%;
+        position: relative;
+        left: 100px;
+        top: -1px;
+    }
 }
