@@ -351,7 +351,7 @@ nav .nav_list li a:hover {
         height: 100%;
     }
 
-    .overlay {
+    .avatar_overlay {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -362,12 +362,13 @@ nav .nav_list li a:hover {
         /* margin: 10px 10px; */
         background-size: cover;
         transition: 1s;
-        background: linear-gradient(#00000000, #0000005e, #0000005e);
+        background: rgba(255, 252, 252, 0.302);
+        /* background: linear-gradient(#00000000, #0000005e, #0000005e); */
     }
 
 }
 
-#avatar_image:hover .overlay {
+#avatar_image:hover .avatar_overlay {
     display: none;
     transition: 0.001s;
 }
@@ -626,20 +627,41 @@ nav .nav_list li a:hover {
     position: relative;
 }
 
-.animal_overlay {
+.animal_overlay1,
+.animal_overlay2,
+.animal_overlay3,
+.animal_overlay4 {
     width: 200px;
     height: 159px;
     position: absolute;
     top: 0;
     background-size: cover;
-    transition: 1s;
+    transition: 0.001s;
     cursor: pointer;
 }
 
-.animal_overlay:hover {
-    background: linear-gradient(#00000000, #0000005e, #0000005e);
+.animal_overlay1:hover,
+.animal_overlay2:hover,
+.animal_overlay3:hover,
+.animal_overlay4:hover {
+    background: rgba(255, 252, 252, 0.5);
+    transition: 0.001s;
 }
-
+#my_coln .overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 1s;
+    z-index: 1;
+}
+.overlay.active{
+    display: block;
+    background: linear-gradient(#00000000, #0000005e, #0000005e);
+    /* background: rgba(255, 252, 252, 0.302); */
+}
 
 #opt_btn {
     display: flex;
@@ -720,7 +742,10 @@ nav .nav_list li a:hover {
         margin: 8px 8px;
     }
 
-    .animal_overlay {
+    .animal_overlay1,
+    .animal_overlay2,
+    .animal_overlay3,
+    .animal_overlay4 {
         width: 170px;
         height: 135px;
     }
