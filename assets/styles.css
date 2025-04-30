@@ -509,7 +509,6 @@ nav .nav_list li a:hover {
 
 }
 
-
 /* Portfolio */
 #port_intro {
     display: flex;
@@ -630,7 +629,11 @@ nav .nav_list li a:hover {
 .animal_overlay1,
 .animal_overlay2,
 .animal_overlay3,
-.animal_overlay4 {
+.animal_overlay4,
+.animal_overlay5,
+.animal_overlay6,
+.animal_overlay7,
+.animal_overlay8 {
     width: 200px;
     height: 159px;
     position: absolute;
@@ -643,11 +646,16 @@ nav .nav_list li a:hover {
 .animal_overlay1:hover,
 .animal_overlay2:hover,
 .animal_overlay3:hover,
-.animal_overlay4:hover {
+.animal_overlay4:hover,
+.animal_overlay5:hover,
+.animal_overlay6:hover,
+.animal_overlay7:hover,
+.animal_overlay8:hover {
     background: rgba(255, 252, 252, 0.5);
     transition: 0.001s;
 }
-#my_coln .overlay{
+
+#my_coln .overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -657,7 +665,8 @@ nav .nav_list li a:hover {
     transition: 1s;
     z-index: 1;
 }
-.overlay.active{
+
+.overlay.active {
     display: block;
     background: linear-gradient(#00000000, #0000005e, #0000005e);
     /* background: rgba(255, 252, 252, 0.302); */
@@ -745,14 +754,26 @@ nav .nav_list li a:hover {
     .animal_overlay1,
     .animal_overlay2,
     .animal_overlay3,
-    .animal_overlay4 {
-        width: 170px;
-        height: 135px;
+    .animal_overlay4,
+    .animal_overlay5,
+    .animal_overlay6,
+    .animal_overlay7,
+    .animal_overlay8 {
+        width: 250px;
+        height: 188px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .animal_overlay {
+
+    .animal_overlay1,
+    .animal_overlay2,
+    .animal_overlay3,
+    .animal_overlay4,
+    .animal_overlay5,
+    .animal_overlay6,
+    .animal_overlay7,
+    .animal_overlay8 {
         min-width: 250px;
         height: 187px;
     }
