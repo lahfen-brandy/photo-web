@@ -344,7 +344,7 @@ nav .nav_list li a:hover {
     position: relative;
     margin-top: 50px;
     justify-content: center;
-    cursor: pointer;
+    /* cursor: pointer; */
 
     img {
         width: 100%;
@@ -635,7 +635,7 @@ nav .nav_list li a:hover {
 .animal_overlay7,
 .animal_overlay8 {
     width: 200px;
-    height: 159px;
+    height: 160px;
     position: absolute;
     top: 0;
     background-size: cover;
@@ -653,6 +653,93 @@ nav .nav_list li a:hover {
 .animal_overlay8:hover {
     background: rgba(255, 252, 252, 0.5);
     transition: 0.001s;
+}
+
+#hero-img {
+    display: none;
+}
+
+#hero-img.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: black;
+}
+
+#menu0,
+#menu1,
+#menu2,
+#menu3,
+#menu4,
+#menu5,
+#menu6,
+#menu7 {
+    display: none;
+    width: 80%;
+    height: 500px;
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+    background-size: contain 50%;
+    background-repeat: no-repeat;
+    z-index: 6;
+
+    img {
+        z-index: 6;
+    }
+
+    p {
+        display: flex;
+        position: relative;
+        bottom: 0;
+        left: 6%;
+        justify-content: left;
+        align-items: center;
+        font-family: "Lato", sans-serif;
+        font-weight: normal;
+        color: rgba(255, 255, 255, 0.436);
+        font-size: 20px;
+    }
+}
+
+#menu0.active,
+#menu1.active,
+#menu2.active,
+#menu3.active,
+#menu4.active,
+#menu5.active,
+#menu6.active,
+#menu7.active {
+    display: block;
+}
+
+.close-btn {
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    border: none;
+    background-color: black;
+    text-align: center;
+    width: 40px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 252, 252, 0.96);
+    color: #333;
 }
 
 #my_coln .overlay {
