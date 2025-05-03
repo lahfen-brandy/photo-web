@@ -682,19 +682,15 @@ nav .nav_list li a:hover {
 #menu7 {
     display: none;
     width: 80%;
-    height: 500px;
+    height: 100%;
     position: fixed;
-    top: 20%;
-    left: 40%;
     justify-content: center;
     align-items: center;
     background-size: contain 50%;
     background-repeat: no-repeat;
     z-index: 6;
-
-    img {
-        z-index: 6;
-    }
+    top: 1px;
+    left:160px;
 
     p {
         display: flex;
@@ -708,6 +704,18 @@ nav .nav_list li a:hover {
         color: rgba(255, 255, 255, 0.436);
         font-size: 20px;
     }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
 #menu0.active,
@@ -718,7 +726,9 @@ nav .nav_list li a:hover {
 #menu5.active,
 #menu6.active,
 #menu7.active {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-btn {
@@ -830,7 +840,22 @@ nav .nav_list li a:hover {
         display: flex;
         width: 100%;
     }
-
+    #menu0,
+    #menu1,
+    #menu2,
+    #menu3,
+    #menu4,
+    #menu5,
+    #menu6,
+    #menu7 {
+        width: 100%;
+        top:-100px;
+        left: 5px;
+        div{
+            width: 80%;
+            justify-content: center;
+        }
+    }
     .animal-coln img,
     .animal-coln_2 img {
         display: flex;
